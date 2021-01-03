@@ -1,0 +1,68 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- End of Sidebar -->
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <app-topbar></app-topbar>
+            <!-- End of Topbar -->
+
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+                            <h2>Ajouter universite</h2>
+                            <form [formGroup]="universityForm"  >
+                                <div>
+                                <label for="exampleFormControlInput1">Nom de l'universités</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"  placeholder="name" formControlName="name"   >
+                                <small
+                                *ngIf="universityForm.get('name')?.touched && universityForm.get('name')?.invalid"
+                                class="text-danger">name is required</small>
+                         
+                                </div>
+                                <div>
+                                    <label for="exampleFormControlInput1">URL</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"  placeholder="url" formControlName="url" >
+                                    <small
+                                    *ngIf="universityForm.get('url')?.touched && universityForm.get('url')?.invalid"
+                                    class="text-danger">url is required</small>
+                                </div>
+
+    
+                                <div>
+                                    <label for="exampleFormControlInput1">Image</label><br>
+                                    <input type="text" name="mon_fichier"  placeholder="imge"  formControlName="image" class="form-control"   >
+                                    <small
+                                    *ngIf="universityForm.get('image')?.touched && universityForm.get('image')?.invalid"
+                                    class="text-danger">image is required</small>
+                                </div>
+                                
+                                
+    
+                                <div>
+                                  <label for="exampleFormControlInput1">Lieu</label><br>
+                                  <input type="text" name="mon_fichier"  placeholder="lieu" class="form-control"   formControlName="lieu" >
+                                  <small
+                                  *ngIf="universityForm.get('lieu')?.touched && universityForm.get('lieu')?.invalid"
+                                  class="text-danger">lieu is required</small>
+                              </div>
+                              <div>
+                                <label for="exampleFormControlInput1">Frais d'inscription</label><br>
+                                <input type="text" name="mon_fichier"  class="form-control"  placeholder="fraisInscription"  formControlName="fraisInscription" >
+                                <small
+                                  *ngIf="universityForm.get('fraisInscription')?.touched && universityForm.get('fraisInscription')?.invalid"
+                                  class="text-danger">fraisInscription is required</small>
+                                </div>
+                                
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-4" routerLink="/gestionUniversite">Ajouter</button>
+                                </div>
+                            </form>
+                    </div>

@@ -1,0 +1,26 @@
+<!-- Navigation -->
+<app-nav-bar></app-nav-bar>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    
+    <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"*ngFor="let universite of universites" >
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="{{universite.url}}" style="color: aliceblue;">{{universite.name}}</a></h2>
+        <p class="lead">{{universite.lieu}}</p>
+        <p class="lead">Télephone:{{universite.tel}}</p>
+        <h4>Frais d'inscription:{{universite.fraisInscription}}DT</h4>
+      </div>
+      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"> <img class="bd-placeholder-img" width="200" height="250" src="{{universite.image}}"></div>
+    
+    </div>
+
+  </div>
+
+
+  
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
